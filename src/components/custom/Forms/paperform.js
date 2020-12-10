@@ -13,6 +13,7 @@ import {
   Label
 } from "reactstrap"
 
+import { Link } from "react-router-dom"
 import Checkbox from "./../../@vuexy/checkbox/CheckboxesVuexy"
 import { Check } from "react-feather"
 
@@ -60,16 +61,20 @@ class VerticalForm extends React.Component {
                 </FormGroup>
               </Col>
               <Col sm="12">
+                
                 <FormGroup>
+                <Link to="/subject/MCQpaper"> 
                   <Button.Ripple
                     color="primary"
                     type="submit"
                     className="mr-1 mb-1"
-                    onClick={e => e.preventDefault()}
+                    // onClick={e => e.preventDefault()}
                   >
                     Next
                   </Button.Ripple>
+                  </Link>
                 </FormGroup>
+               
               </Col>
             </Row>
           </Form>

@@ -1,11 +1,11 @@
 import React from "react";
 
-import Dash from "./papermaking/SubjectDash"
+import YearDash from "./papermaking/YearDash"
 
 class FacultySection extends React.Component{
     render(){
         return (
-         <Dash/>
+         <YearDash/>
         )
     }
 }
