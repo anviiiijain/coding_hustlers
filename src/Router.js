@@ -8,21 +8,30 @@ import knowledgeBaseCategory from "./views/pages/knowledge-base/Category"
 import knowledgeBaseQuestion from "./views/pages/knowledge-base/Questions"
 import { ContextLayout } from "./utility/context/Layout"
 
+import paperForm from "./components/custom/Forms/paperform"
+
 // Route-based code splitting
 const StudentSection= lazy(() =>
   import("./sections/Student")
 )
+const FacultySection= lazy(() =>
+  import("./sections/Faculty")
+)
+const AdminSection= lazy(() =>
+  import("./sections/Admin")
+)
+
+const analyticsDashboard= lazy(() =>
+  import("./views/dashboard/analytics/AnalyticsDashboard")
+)
 const ecommerceDashboard = lazy(() =>
   import("./views/dashboard/ecommerce/EcommerceDashboard")
 )
-const email = lazy(() => import("./views/apps/email/Email"))
-const chat = lazy(() => import("./views/apps/chat/Chat"))
-const todo = lazy(() => import("./views/apps/todo/Todo"))
 const calendar = lazy(() => import("./views/apps/calendar/Calendar"))
-const shop = lazy(() => import("./views/apps/ecommerce/shop/Shop"))
-const wishlist = lazy(() => import("./views/apps/ecommerce/wishlist/Wishlist"))
-const checkout = lazy(() => import("./views/apps/ecommerce/cart/Cart"))
-const productDetail = lazy(() => import("./views/apps/ecommerce/detail/Detail"))
+// const shop = lazy(() => import("./views/apps/ecommerce/shop/Shop"))
+// const wishlist = lazy(() => import("./views/apps/ecommerce/wishlist/Wishlist"))
+// const checkout = lazy(() => import("./views/apps/ecommerce/cart/Cart"))
+// const productDetail = lazy(() => import("./views/apps/ecommerce/detail/Detail"))
 const grid = lazy(() => import("./views/ui-elements/grid/Grid"))
 const typography = lazy(() =>
   import("./views/ui-elements/typography/Typography")
@@ -130,16 +139,16 @@ const search = lazy(() => import("./views/pages/search/Search"))
 const accountSettings = lazy(() =>
   import("./views/pages/account-settings/AccountSettings")
 )
-const invoice = lazy(() => import("./views/pages/invoice/Invoice"))
+// const invoice = lazy(() => import("./views/pages/invoice/Invoice"))
 const comingSoon = lazy(() => import("./views/pages/misc/ComingSoon"))
 const error404 = lazy(() => import("./views/pages/misc/error/404"))
 const error500 = lazy(() => import("./views/pages/misc/error/500"))
 const authorized = lazy(() => import("./views/pages/misc/NotAuthorized"))
 const maintenance = lazy(() => import("./views/pages/misc/Maintenance"))
-const apex = lazy(() => import("./views/charts/apex/ApexCharts"))
-const chartjs = lazy(() => import("./views/charts/chart-js/ChartJS"))
-const extreme = lazy(() => import("./views/charts/recharts/Recharts"))
-const leafletMaps = lazy(() => import("./views/maps/Maps"))
+// const apex = lazy(() => import("./views/charts/apex/ApexCharts"))
+// const chartjs = lazy(() => import("./views/charts/chart-js/ChartJS"))
+// const extreme = lazy(() => import("./views/charts/recharts/Recharts"))
+// const leafletMaps = lazy(() => import("./views/maps/Maps"))
 const toastr = lazy(() => import("./extensions/toastify/Toastify"))
 const sweetAlert = lazy(() => import("./extensions/sweet-alert/SweetAlert"))
 const rcSlider = lazy(() => import("./extensions/rc-slider/Slider"))
@@ -218,7 +227,7 @@ class AppRouter extends React.Component {
       // Set the directory path if you are deploying in sub-folder
       <Router history={history}>
         <Switch>
-          {/* <AppRoute exact path="/" component={analyticsDashboard} /> */}
+          <AppRoute exact path="/" component={analyticsDashboard} />
           <AppRoute
             path="/ecommerce-dashboard"
             component={ecommerceDashboard}
@@ -227,21 +236,21 @@ class AppRouter extends React.Component {
             path="/Student"
             component={ StudentSection}
           />
-          <AppRoute
-            path="/email"
+           <AppRoute
+            path="/Faculty"
+            component={ FacultySection}
+          /> <AppRoute
+          path="/Admin"
+          component={ AdminSection}
+        />
+        
+        <AppRoute
+            path="/subject/paper"
+            component={paperForm}
             exact
-            component={() => <Redirect to="/email/inbox" />}
           />
-          <AppRoute path="/email/:filter" component={email} />
-          <AppRoute path="/chat" component={chat} />
-          <AppRoute
-            path="/todo"
-            exact
-            component={() => <Redirect to="/todo/all" />}
-          />
-          <AppRoute path="/todo/:filter" component={todo} />
           <AppRoute path="/calendar" component={calendar} />
-          <AppRoute path="/ecommerce/shop" component={shop} />
+          {/* <AppRoute path="/ecommerce/shop" component={shop} />
           <AppRoute path="/ecommerce/wishlist" component={wishlist} />
           <AppRoute
             path="/ecommerce/product-detail"
@@ -251,7 +260,7 @@ class AppRouter extends React.Component {
             path="/ecommerce/checkout"
             component={checkout}
             permission="admin"
-          />
+          /> */}
           <AppRoute path="/data-list/list-view" component={listView} />
           <AppRoute path="/data-list/thumb-view" component={thumbView} />
           <AppRoute path="/ui-element/grid" component={grid} />
@@ -339,7 +348,7 @@ class AppRouter extends React.Component {
             path="/pages/account-settings"
             component={accountSettings}
           />
-          <AppRoute path="/pages/invoice" component={invoice} />
+          {/* <AppRoute path="/pages/invoice" component={invoice} /> */}
           <AppRoute
             path="/misc/coming-soon"
             component={comingSoon}
@@ -377,10 +386,10 @@ class AppRouter extends React.Component {
           <AppRoute path="/app/user/list" component={userList} />
           <AppRoute path="/app/user/edit" component={userEdit} />
           <AppRoute path="/app/user/view" component={userView} />
-          <AppRoute path="/charts/apex" component={apex} />
+          {/* <AppRoute path="/charts/apex" component={apex} />
           <AppRoute path="/charts/chartjs" component={chartjs} />
           <AppRoute path="/charts/recharts" component={extreme} />
-          <AppRoute path="/maps/leaflet" component={leafletMaps} />
+          <AppRoute path="/maps/leaflet" component={leafletMaps} /> */}
           <AppRoute path="/extensions/sweet-alert" component={sweetAlert} />
           <AppRoute path="/extensions/toastr" component={toastr} />
           <AppRoute path="/extensions/slider" component={rcSlider} />
