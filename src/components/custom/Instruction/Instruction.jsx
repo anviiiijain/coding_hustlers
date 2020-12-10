@@ -9,6 +9,8 @@ import {
 } from "reactstrap"
 import Button from "@material-ui/core/Button"
 import { Star, Briefcase } from "react-feather"
+import { Link } from "react-router-dom"
+
 import Red from "@material-ui/core/colors/red"
 import {makeStyles} from "@material-ui/core/styles"
 import Green from "@material-ui/core/colors/green"
@@ -50,9 +52,11 @@ const classes  = useStyles()
 
             <h4>Best of Luck</h4>
             </CardBody>
+            <Link to="/mcq">
               <Button className={classes.button}>
                <b> Enter </b>
               </Button>
+              </Link>
             </CardBody>
           </Card>
         </Col>
