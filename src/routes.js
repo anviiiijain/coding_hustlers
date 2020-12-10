@@ -109,7 +109,6 @@ class AppRouter extends React.Component {
       <Route path="/subjective" exact component={Subjective}/>
       
     </Switch>)
-    
     return (
    <EndTest/>
         )
