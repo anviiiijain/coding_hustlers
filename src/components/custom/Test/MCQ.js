@@ -24,39 +24,26 @@ class MCQ extends React.Component {
         <CardBody>
           <Form>
             <Row>
-            <Col sm="12">
-                <div>question?</div>
-                </Col>
-                <Col sm="12">
-                <Radio
-            label="Default"
-            color="primary"
-            defaultChecked={false}
-            name="Option1"
-            className="py-50"
-          />
-           <Radio
-            label="Default"
-            color="primary"
-            defaultChecked={false}
-            name="Option2"
-            className="py-50"
-          />
-           <Radio
-            label="Default"
-            color="primary"
-            defaultChecked={false}
-            name="Option3"
-            className="py-50"
-          />
-           <Radio
-            label="Default"
-            color="primary"
-            defaultChecked={false}
-            name="Option4"
-            className="py-50"
-          />
-                </Col>
+            <FormGroup check >
+              <Label check>
+                <Input type="radio" name="basicRadio"  /> Active
+              </Label>
+            </FormGroup>
+            <FormGroup check e>
+              <Label check>
+                <Input type="radio" name="basicRadio" /> Inactive
+              </Label>
+            </FormGroup>
+            <FormGroup check >
+              <Label check>
+                <Input type="radio" name="basicRadio"  /> Active Disabled
+              </Label>
+            </FormGroup>
+            <FormGroup check >
+              <Label check>
+                <Input type="radio" name="basicRadio" /> Inactive Disabled
+              </Label>
+            </FormGroup>
               <Col sm="12">
                 <FormGroup>
                   <Button.Ripple

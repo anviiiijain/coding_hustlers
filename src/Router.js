@@ -80,7 +80,7 @@ const Pagination = lazy(() =>
 const NavComponent = lazy(() =>
   import("./components/reactstrap/navComponent/NavComponent")
 )
-const Navbar = lazy(() => import("./components/reactstrap/navbar/Navbar"))
+// const Navbar = lazy(() => import("./components/reactstrap/navbar/Navbar"))
 const Tabs = lazy(() => import("./components/reactstrap/tabs/Tabs"))
 const TabPills = lazy(() => import("./components/reactstrap/tabPills/TabPills"))
 const Tooltips = lazy(() => import("./components/reactstrap/tooltips/Tooltips"))
@@ -315,7 +315,7 @@ let testRoute = null
           <AppRoute path="/components/modals" component={Modals} />
           <AppRoute path="/components/pagination" component={Pagination} />
           <AppRoute path="/components/nav-component" component={NavComponent} />
-          <AppRoute path="/components/navbar" component={Navbar} />
+          {/* <AppRoute path="/components/navbar" component={Navbar} /> */}
           <AppRoute path="/components/tabs-component" component={Tabs} />
           <AppRoute path="/components/pills-component" component={TabPills} />
           <AppRoute path="/components/tooltips" component={Tooltips} />
