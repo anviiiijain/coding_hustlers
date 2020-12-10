@@ -32,7 +32,7 @@ import {
   deselectAllMails,
   unreadMails,
   setLabel
-} from "../../../redux/actions/email/index"
+} from "../../../redux/Actions/email/index"
 import Checkbox from "../../../components/@vuexy/checkbox/CheckboxesVuexy"
 import EmailDetails from "./EmailDetails"
 

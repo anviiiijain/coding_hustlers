@@ -19,7 +19,7 @@ import {
   updateTask,
   updateLabel,
   addNewTask
-} from "../../../redux/actions/todo/index"
+} from "../../../redux/Actions/todo/index"
 class TaskSidebar extends React.Component {
 
   // static getDerivedStateFromProps (props, state){

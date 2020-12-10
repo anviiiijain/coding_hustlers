@@ -10,7 +10,7 @@ import {
   importantTask,
   trashTask,
   searchTask
-} from "../../../redux/actions/todo/index"
+} from "../../../redux/Actions/todo/index"
 import Checkbox from "../../../components/@vuexy/checkbox/CheckboxesVuexy"
 class TodoList extends React.Component {
   static getDerivedStateFromProps(props, state) {

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { CardBody, FormGroup, Form, Input, Button, Label } from "reactstrap"
 import Checkbox from "../../../../components/@vuexy/checkbox/CheckboxesVuexy"
 import { Mail, Lock, Check } from "react-feather"
-import { loginWithJWT } from "../../../../redux/actions/auth/loginActions"
+import { loginWithJWT } from "../../../../redux/Actions/auth/loginActions"
 import { connect } from "react-redux"
 import { history } from "../../../../history"
 

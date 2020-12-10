@@ -13,8 +13,7 @@ import {
   Label
 } from "reactstrap"
 
-import Checkbox from "../@vuexy/checkbox/CheckboxesVuexy"
-import Radio from "../@vuexy/radio/RadioVuexy"
+import Radio from "../../@vuexy/radio/RadioVuexy"
 
 import { Check } from "react-feather"
 

@@ -3,7 +3,7 @@ import { Button, ListGroup, ListGroupItem } from "reactstrap"
 import PerfectScrollbar from "react-perfect-scrollbar"
 import { X, Layers, Star, Info, Check, Trash } from "react-feather"
 import { connect } from "react-redux"
-import { changeFilter } from "../../../redux/actions/todo/index"
+import { changeFilter } from "../../../redux/Actions/todo/index"
 class TodoSidebar extends React.Component {
   render() {
     return (

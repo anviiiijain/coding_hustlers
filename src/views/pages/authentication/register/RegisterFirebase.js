@@ -3,7 +3,7 @@ import { Form, FormGroup, Input, Label, Button } from "reactstrap"
 import Checkbox from "../../../../components/@vuexy/checkbox/CheckboxesVuexy"
 import { Check } from "react-feather"
 import { connect } from "react-redux"
-import { signupWithFirebase } from "../../../../redux/actions/auth/registerActions"
+import { signupWithFirebase } from "../../../../redux/Actions/auth/registerActions"
 import { history } from "../../../../history"
 class RegisterFirebase extends React.Component {
   state = {

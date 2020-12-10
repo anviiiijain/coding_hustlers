@@ -17,7 +17,7 @@ import { connect } from "react-redux"
 import {
   loadSuggestions,
   updateStarred
-} from "../../../redux/actions/navbar/Index"
+} from "../../../redux/Actions/navbar/Index"
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd"
 
 // a little function to help us with reordering the bookmarks
