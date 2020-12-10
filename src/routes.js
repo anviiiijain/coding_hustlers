@@ -10,6 +10,9 @@ import Subjective from "./components/custom/Test/Subjective"
 import paperForm from "./components/custom/Forms/paperform"
 import MCQpaperForm from "./components/custom/Forms/MCQpaperform"
 import SubjectDash from "./sections/Faculty/papermaking/SubjectDash"
+import EndTest from "./components/custom/EndTest/EndTest"
+
+
 
 const StudentSection= lazy(() =>
   import("./sections/Student")
@@ -19,6 +22,10 @@ const FacultySection= lazy(() =>
 )
 const AdminSection= lazy(() =>
   import("./sections/Admin")
+)
+
+const Home=lazy(()=>
+import("./components/custom/Instruction/Instruction")
 )
 
 const error404 = lazy(() => import("./views/pages/misc/error/404"))
@@ -63,11 +70,14 @@ class AppRouter extends React.Component {
       return (
         <Router history={history}>
           <Switch>
-           
-            <AppRoute
+          <AppRoute
               path="/"
-              component={ StudentSection}
+              component={ Home}
               exact
+            />
+            <AppRoute
+              path="/Student"
+              component={ StudentSection}
             />
              <AppRoute
               path="/Faculty"
@@ -93,15 +103,15 @@ class AppRouter extends React.Component {
             />
   
   let testRoute = null 
+    
+    testRoute = (<Switch>
+      <Route path="/mcq" exact  component={MCQ}/>
+      <Route path="/subjective" exact component={Subjective}/>
       
-      testRoute = (<Switch>
-        <Route path="/mcq" exact  component={MCQ}/>
-        <Route path="/subjective" exact component={Subjective}/>
-        
-      </Switch>)
-      
-      return (
-      <MCQ/>
+    </Switch>)
+    
+    return (
+   <EndTest/>
         )
         <AppRoute component={error404} fullLayout />
         </Switch>
