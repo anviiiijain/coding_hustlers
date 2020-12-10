@@ -10,7 +10,7 @@ import {
 import ExtensionsHeader from "../extensionsHeader"
 import { connect } from "react-redux"
 import { Link } from "react-router-dom"
-import { changeRole } from "../../redux/Actions/auth/loginActions"
+import { changeRole } from "../../redux/actions/auth/loginActions"
 import Radio from "../../components/@vuexy/radio/RadioVuexy"
 import { ChevronDown } from "react-feather"
 class AccessControl extends React.Component {

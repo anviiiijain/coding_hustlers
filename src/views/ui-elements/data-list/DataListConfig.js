@@ -29,7 +29,7 @@ import {
   updateData,
   addData,
   filterData
-} from "../../../redux/Actions/data-list/"
+} from "../../../redux/actions/data-list/"
 import Sidebar from "./DataListSidebar"
 import Chip from "../../../components/@vuexy/chips/ChipComponent"
 import Checkbox from "../../../components/@vuexy/checkbox/CheckboxesVuexy"

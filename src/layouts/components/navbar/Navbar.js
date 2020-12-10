@@ -6,7 +6,7 @@ import { useAuth0 } from "../../../authServices/auth0/auth0Service"
 import {
   logoutWithJWT,
   logoutWithFirebase
-} from "../../../redux/Actions/auth/loginActions"
+} from "../../../redux/actions/auth/loginActions"
 import NavbarBookmarks from "./NavbarBookmarks"
 import NavbarUser from "./NavbarUser"
 import userImg from "../../../assets/img/portrait/small/avatar-s-11.jpg"

@@ -13,7 +13,7 @@ import {
   changeFooterType,
   changeMenuColor,
   hideScrollToTop
-} from "../redux/Actions/customizer/index";
+} from "../redux/actions/customizer/index";
 
 class VerticalLayout extends PureComponent {
   state = {
