@@ -1,8 +1,8 @@
 import React, { PureComponent } from "react";
 import classnames from "classnames";
 import Customizer from "../components/@vuexy/customizer/Customizer";
-import Sidebar from "./components/menu/vertical-menu/Sidebar";
-import Navbar from "./components/navbar/Navbar";
+// import Sidebar from "./components/menu/vertical-menu/Sidebar";
+// import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import { connect } from "react-redux";
 import {
@@ -265,15 +265,15 @@ class VerticalLayout extends PureComponent {
           }
         )}
       >
-        <Sidebar {...sidebarProps} />
+        {/* <Sidebar {...sidebarProps} /> */}
         <div
-          className={classnames("app-content content", {
-            "show-overlay": this.state.appOverlay === true
-          })}
-          onClick={this.handleAppOverlayClick}
+          // className={classnames("app-content content", {
+          //   "show-overlay": this.state.appOverlay === true
+          // })}
+          // onClick={this.handleAppOverlayClick}
         >
-          <Navbar {...navbarProps} />
-          <div className="content-wrapper">{this.props.children}</div>
+          {/* <Navbar {...navbarProps} /> */}
+          <div className="content-wrapper " >{this.props.children}</div>
         </div>
 
         <Footer {...footerProps} />

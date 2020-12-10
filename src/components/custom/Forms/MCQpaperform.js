@@ -77,6 +77,17 @@ class MCQpaper extends React.Component {
                   />
                 </FormGroup>
               </Col>
+              <Col sm="12">
+                <FormGroup>
+                <Label for="CAnswer">Correct Answer :</Label>
+                  <Input
+                    type="Text"
+                    name="Option 4"
+                    id="Option 4"
+                    placeholder="Option 4"
+                  />
+                </FormGroup>
+              </Col>
               
               <Col sm="12">
                 <FormGroup>

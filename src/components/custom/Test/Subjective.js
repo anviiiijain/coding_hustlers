@@ -42,12 +42,10 @@ const Subjective =()=>{
                   <Col sm="12" className={classes.area}>
                   <TextareaAutosize
     
-      rowsMax={4}
-      aria-label="maximum height"
-      placeholder="Maximum 4 rows"
+      rowsMax={6}
+      placeholder="Enter your answer"
       
-      defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua."
+      defaultValue="."
     />
                   </Col>
                 <Col sm="12">
