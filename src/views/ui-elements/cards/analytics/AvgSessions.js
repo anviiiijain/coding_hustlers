@@ -1,19 +1,30 @@
-import React from "react";
-import { Card, CardBody, Row, Col, Button, Progress } from "reactstrap";
-import Chart from "react-apexcharts";
-import { ChevronsRight } from "react-feather";
+import React from "react"
+import {
+  Card,
+  CardBody,
+  Row,
+  Col,
+  Button,
+  UncontrolledDropdown,
+  DropdownMenu,
+  DropdownItem,
+  DropdownToggle,
+  Progress
+} from "reactstrap"
+import Chart from "react-apexcharts"
+import { ChevronsRight, ChevronDown } from "react-feather"
 
 class AvgSessions extends React.Component {
   state = {
     options: {
       chart: {
         sparkline: { enabled: true },
-        toolbar: { show: false },
+        toolbar: { show: false }
       },
       states: {
         hover: {
-          filter: "none",
-        },
+          filter: "none"
+        }
       },
       colors: [
         this.props.labelColor,
@@ -21,39 +32,39 @@ class AvgSessions extends React.Component {
         this.props.primary,
         this.props.labelColor,
         this.props.labelColor,
-        this.props.labelColor,
+        this.props.labelColor
       ],
       grid: {
         show: false,
         padding: {
           left: 0,
-          right: 0,
-        },
+          right: 0
+        }
       },
       dataLabels: {
-        enabled: false,
+        enabled: false
       },
       plotOptions: {
         bar: {
           columnWidth: "45%",
           distributed: true,
-          endingShape: "rounded",
-        },
+          endingShape: "rounded"
+        }
       },
       tooltip: {
-        x: { show: false },
+        x: { show: false }
       },
       xaxis: {
-        type: "numeric",
-      },
+        type: "numeric"
+      }
     },
     series: [
       {
-        name: "People",
-        data: ["75k", 125, 225, 175, 125, 75],
-      },
-    ],
-  };
+        name: "Sessions",
+        data: [75, 125, 225, 175, 125, 75, 25]
+      }
+    ]
+  }
   render() {
     return (
       <Card>
@@ -67,10 +78,10 @@ class AvgSessions extends React.Component {
             >
               <div className="session-info">
                 <h2 className="text-bold-600 mb-25">2.7K</h2>
-                <p className="text-bold-500 mb-75">Individuals In Need</p>
+                <p className="text-bold-500 mb-75">Avg Sessions</p>
                 <h5 className="font-medium-2">
                   <span className="text-success">+5.2% </span>
-                  <span>vs last 6 months</span>
+                  <span>vs last 7 days</span>
                 </h5>
               </div>
               <Button.Ripple className="btn-block shadow" color="primary">
@@ -83,6 +94,16 @@ class AvgSessions extends React.Component {
               xs={{ order: 1 }}
               className="d-flex justify-content-between flex-column text-right"
             >
+              <UncontrolledDropdown>
+                <DropdownToggle tag="small" className="text-bold-500 cursor-pointer">
+                  Last 7 days <ChevronDown size={10} />
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>Last 28 days</DropdownItem>
+                  <DropdownItem>Last Month</DropdownItem>
+                  <DropdownItem>Last Year</DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
               <Chart
                 options={this.state.options}
                 series={this.state.series}
@@ -102,17 +123,17 @@ class AvgSessions extends React.Component {
               <Progress className="mt-25" color="warning" value="60" />
             </Col>
             <Col md="6" sm="12">
-              <p className="mb-0">Transactions: 90%</p>
+              <p className="mb-0">Retention: 90%</p>
               <Progress className="mt-25" color="danger" value="70" />
             </Col>
             <Col md="6" sm="12">
-              <p className="mb-0">6 months</p>
+              <p className="mb-0">Duration: 1yr</p>
               <Progress className="mt-25" color="success" value="80" />
             </Col>
           </Row>
         </CardBody>
       </Card>
-    );
+    )
   }
 }
-export default AvgSessions;
+export default AvgSessions

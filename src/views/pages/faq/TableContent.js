@@ -1,10 +1,10 @@
-import React from "react";
-import { Card, CardBody } from "reactstrap";
-import img1 from "../../../assets/img/portrait/small/avatar-s-1.jpg";
-import img2 from "../../../assets/img/portrait/small/avatar-s-2.jpg";
-import img3 from "../../../assets/img/portrait/small/avatar-s-3.jpg";
-import img4 from "../../../assets/img/portrait/small/avatar-s-4.jpg";
-import img5 from "../../../assets/img/portrait/small/avatar-s-5.jpg";
+import React from "react"
+import { Card, CardBody } from "reactstrap"
+import img1 from "../../../assets/img/portrait/small/avatar-s-1.jpg"
+import img2 from "../../../assets/img/portrait/small/avatar-s-2.jpg"
+import img3 from "../../../assets/img/portrait/small/avatar-s-3.jpg"
+import img4 from "../../../assets/img/portrait/small/avatar-s-4.jpg"
+import img5 from "../../../assets/img/portrait/small/avatar-s-5.jpg"
 
 class TableContent extends React.Component {
   render() {
@@ -14,19 +14,27 @@ class TableContent extends React.Component {
           <h4>Table of Content</h4>
           <div className="faq-content mt-1">
             <div className="faq-table-content">
+              <span className="bullet bullet-secondary" />
+              All
+            </div>
+            <div className="faq-table-content">
+              <span className="bullet bullet-primary" />
+              General
+            </div>
+            <div className="faq-table-content">
               <span className="bullet bullet-success" />
-              Neutral
+              Licenses
             </div>
             <div className="faq-table-content">
               <span className="bullet bullet-warning" />
-              Moderately Urgent
+              Company usage
             </div>
             <div className="faq-table-content">
               <span className="bullet bullet-danger" />
-              Critical
+              Trademark use
             </div>
           </div>
-          <h4 className="mt-3">Donators</h4>
+          <h4 className="mt-3">Supporters</h4>
           <div className="supporter-details mt-2">
             <div className="supporter-img d-inline-block">
               <img className="rounded-circle" src={img1} alt="Avatar" />
@@ -74,7 +82,7 @@ class TableContent extends React.Component {
           </div>
         </CardBody>
       </Card>
-    );
+    )
   }
 }
-export default TableContent;
+export default TableContent

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   Card,
   CardHeader,
@@ -10,27 +10,26 @@ import {
   NavItem,
   NavLink,
   TabContent,
-  TabPane,
-} from "reactstrap";
-import classnames from "classnames";
-// import RegisterFirebase from "./RegisterFirebase";
-import RegisterAuth0 from "./RegisterAuth0";
-import RegisterJWT from "./RegisterJWT";
-import RegisterEmailAndPassword from "./RegisterEmailAndPassword";
-import registerImg from "../../../../assets/img/pages/register.jpg";
-import "../../../../assets/scss/pages/authentication.scss";
+  TabPane
+} from "reactstrap"
+import classnames from "classnames"
+import RegisterFirebase from "./RegisterFirebase"
+import RegisterAuth0 from "./RegisterAuth0"
+import RegisterJWT from "./RegisterJWT"
+import registerImg from "../../../../assets/img/pages/register.jpg"
+import "../../../../assets/scss/pages/authentication.scss"
 
 class Register extends React.Component {
   state = {
-    activeTab: "4",
-  };
-  toggle = (tab) => {
+    activeTab: "1"
+  }
+  toggle = tab => {
     if (this.state.activeTab !== tab) {
       this.setState({
-        activeTab: tab,
-      });
+        activeTab: tab
+      })
     }
-  };
+  }
   render() {
     return (
       <Row className="m-0 justify-content-center">
@@ -63,10 +62,10 @@ class Register extends React.Component {
                     <NavItem>
                       <NavLink
                         className={classnames({
-                          active: this.state.activeTab === "1",
+                          active: this.state.activeTab === "1"
                         })}
                         onClick={() => {
-                          this.toggle("1");
+                          this.toggle("1")
                         }}
                       >
                         JWT
@@ -75,10 +74,10 @@ class Register extends React.Component {
                     <NavItem>
                       <NavLink
                         className={classnames({
-                          active: this.state.activeTab === "2",
+                          active: this.state.activeTab === "2"
                         })}
                         onClick={() => {
-                          this.toggle("2");
+                          this.toggle("2")
                         }}
                       >
                         Firebase
@@ -87,25 +86,13 @@ class Register extends React.Component {
                     <NavItem>
                       <NavLink
                         className={classnames({
-                          active: this.state.activeTab === "3",
+                          active: this.state.activeTab === "3"
                         })}
                         onClick={() => {
-                          this.toggle("3");
+                          this.toggle("3")
                         }}
                       >
                         Auth0
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={classnames({
-                          active: this.state.activeTab === "4",
-                        })}
-                        onClick={() => {
-                          this.toggle("4");
-                        }}
-                      >
-                        Email
                       </NavLink>
                     </NavItem>
                   </Nav>
@@ -120,9 +107,6 @@ class Register extends React.Component {
                       <TabPane tabId="3">
                         <RegisterAuth0 />
                       </TabPane>
-                      <TabPane tabId="4">
-                        <RegisterEmailAndPassword />
-                      </TabPane>
                     </TabContent>
                   </CardBody>
                 </Card>
@@ -131,7 +115,7 @@ class Register extends React.Component {
           </Card>
         </Col>
       </Row>
-    );
+    )
   }
 }
-export default Register;
+export default Register

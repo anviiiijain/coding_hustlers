@@ -3,7 +3,7 @@ import { Form, FormGroup, Input, Label, Button } from "reactstrap"
 import Checkbox from "../../../../components/@vuexy/checkbox/CheckboxesVuexy"
 import { Check } from "react-feather"
 import { connect } from "react-redux"
-// import { signupWithFirebase } from "../../../../redux/actions/auth/registerActions"
+import { signupWithFirebase } from "../../../../redux/actions/auth/registerActions"
 import { history } from "../../../../history"
 class RegisterFirebase extends React.Component {
   state = {
@@ -13,14 +13,14 @@ class RegisterFirebase extends React.Component {
     confirmPass: ""
   }
 
-  // handleRegister = e => {
-  //   e.preventDefault()
-  //   this.props.signupWithFirebase(
-  //     this.state.email,
-  //     this.state.password,
-  //     this.state.name
-  //   )
-  // }
+  handleRegister = e => {
+    e.preventDefault()
+    this.props.signupWithFirebase(
+      this.state.email,
+      this.state.password,
+      this.state.name
+    )
+  }
 
   render() {
     return (
@@ -94,6 +94,6 @@ const mapStateToProps = state => {
     values: state.auth.register
   }
 }
-// export default connect(mapStateToProps, { signupWithFirebase })(
-//   RegisterFirebase
-// )
+export default connect(mapStateToProps, { signupWithFirebase })(
+  RegisterFirebase
+)

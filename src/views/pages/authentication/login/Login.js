@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import {
   Card,
   CardHeader,
@@ -9,26 +9,26 @@ import {
   NavItem,
   NavLink,
   TabContent,
-  TabPane,
-} from "reactstrap";
-import classnames from "classnames";
-import loginImg from "../../../../assets/img/pages/login.png";
-import "../../../../assets/scss/pages/authentication.scss";
-// import LoginAuth0 from "./LoginAuth0";
-// import LoginFirebase from "./LoginFirebase";
-// import LoginJWT from "./LoginJWT";
-import LoginWithEmailAndPassword from "./LoginWithEmailAndPassword";
+  TabPane
+} from "reactstrap"
+import classnames from "classnames"
+import loginImg from "../../../../assets/img/pages/login.png"
+import "../../../../assets/scss/pages/authentication.scss"
+import LoginAuth0 from "./LoginAuth0"
+import LoginFirebase from "./LoginFirebase"
+import LoginJWT from "./LoginJWT"
+
 class Login extends React.Component {
   state = {
-    activeTab: "1",
-  };
-  toggle = (tab) => {
+    activeTab: "1"
+  }
+  toggle = tab => {
     if (this.state.activeTab !== tab) {
       this.setState({
-        activeTab: tab,
-      });
+        activeTab: tab
+      })
     }
-  };
+  }
   render() {
     return (
       <Row className="m-0 justify-content-center">
@@ -58,13 +58,13 @@ class Login extends React.Component {
                     Welcome back, please login to your account.
                   </p>
                   <Nav tabs className="px-2">
-                    {/* <NavItem>
+                    <NavItem>
                       <NavLink
                         className={classnames({
-                          active: this.state.activeTab === "1",
+                          active: this.state.activeTab === "1"
                         })}
                         onClick={() => {
-                          this.toggle("1");
+                          this.toggle("1")
                         }}
                       >
                         JWT
@@ -73,10 +73,10 @@ class Login extends React.Component {
                     <NavItem>
                       <NavLink
                         className={classnames({
-                          active: this.state.activeTab === "2",
+                          active: this.state.activeTab === "2"
                         })}
                         onClick={() => {
-                          this.toggle("2");
+                          this.toggle("2")
                         }}
                       >
                         Firebase
@@ -85,30 +85,18 @@ class Login extends React.Component {
                     <NavItem>
                       <NavLink
                         className={classnames({
-                          active: this.state.activeTab === "3",
+                          active: this.state.activeTab === "3"
                         })}
                         onClick={() => {
-                          this.toggle("3");
+                          this.toggle("3")
                         }}
                       >
                         Auth0
                       </NavLink>
-                    </NavItem> */}
-                    <NavItem>
-                      <NavLink
-                        className={classnames({
-                          active: this.state.activeTab === "4",
-                        })}
-                        onClick={() => {
-                          this.toggle("4");
-                        }}
-                      >
-                        Email
-                      </NavLink>
                     </NavItem>
                   </Nav>
                   <TabContent activeTab={this.state.activeTab}>
-                    {/* <TabPane tabId="1">
+                    <TabPane tabId="1">
                       <LoginJWT />
                     </TabPane>
                     <TabPane tabId="2">
@@ -116,9 +104,6 @@ class Login extends React.Component {
                     </TabPane>
                     <TabPane tabId="3">
                       <LoginAuth0 />
-                    </TabPane> */}
-                    <TabPane tabId="4">
-                      <LoginWithEmailAndPassword />
                     </TabPane>
                   </TabContent>
                 </Card>
@@ -127,7 +112,7 @@ class Login extends React.Component {
           </Card>
         </Col>
       </Row>
-    );
+    )
   }
 }
-export default Login;
+export default Login
