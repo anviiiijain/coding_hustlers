@@ -6,7 +6,7 @@ import { data } from "../../views/pages/knowledge-base/cardData"
 class Cards extends React.Component {
   renderCards = () => {
     let result = data.map(item => {
-      if (this.props.value.length < 1) {
+      if (this.props.value.hasOwnProperty('subject')) {
         return (
           <Col md="4" sm="6" className="search-content" key={item.id}>
             <Card>
@@ -19,12 +19,12 @@ class Cards extends React.Component {
             </Card>
           </Col>
         )
-      } else if (item.title.includes(this.props.value)) {
+      } else if (this.props.value.hasOwnProperty('year')) {
         return (
           <Col md="4" sm="6" className="search-content" key={item.id}>
             <Card>
               <CardBody className="text-center">
-                <Link to="/subject/paper">
+                <Link to="/year">
                   <h4>{item.title.toUpperCase()}</h4>
                   <small className="text-dark">{item.text}</small>
                 </Link>

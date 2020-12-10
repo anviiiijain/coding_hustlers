@@ -9,6 +9,8 @@ import knowledgeBaseQuestion from "./views/pages/knowledge-base/Questions"
 import { ContextLayout } from "./utility/context/Layout"
 
 import paperForm from "./components/custom/Forms/paperform"
+import MCQpaperForm from "./components/custom/Forms/MCQpaperform"
+import SubjectDash from "./sections/Faculty/papermaking/SubjectDash"
 
 // Route-based code splitting
 const StudentSection= lazy(() =>
@@ -243,10 +245,19 @@ class AppRouter extends React.Component {
           path="/Admin"
           component={ AdminSection}
         />
-        
+        <AppRoute
+            path="/year"
+            component={SubjectDash}
+            exact
+          />
         <AppRoute
             path="/subject/paper"
             component={paperForm}
+            exact
+          />
+           <AppRoute
+            path="/subject/MCQpaper"
+            component={MCQpaperForm}
             exact
           />
           <AppRoute path="/calendar" component={calendar} />
