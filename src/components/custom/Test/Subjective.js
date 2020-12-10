@@ -28,7 +28,9 @@ const useStyles = makeStyles({
 
 
 const Subjective =()=>{
-const classes = useStyles()
+
+    const classes = useStyles()
+
     return (
         <Card>
           <CardBody>
