@@ -12,7 +12,7 @@ import {
   loginWithTwitter,
   loginWithGoogle,
   loginWithGithub
-} from "../../../../redux/Actions/auth/loginActions"
+} from "../../../../redux/actions/auth/loginActions"
 
 class LoginFirebase extends React.Component {
   state = {

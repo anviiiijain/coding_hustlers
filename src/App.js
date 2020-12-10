@@ -1,5 +1,5 @@
 import React from "react"
-import Router from "./Router"
+import Router from "./routes"
 import "./components/@vuexy/rippleButton/RippleButton"
 
 import "react-perfect-scrollbar/dist/css/styles.css"

@@ -8,6 +8,8 @@ import knowledgeBaseCategory from "./views/pages/knowledge-base/Category"
 import knowledgeBaseQuestion from "./views/pages/knowledge-base/Questions"
 import { ContextLayout } from "./utility/context/Layout"
 
+import MCQ from "./components/custom/Test/MCQ"
+import Subjective from "./components/custom/Test/Subjective"
 import paperForm from "./components/custom/Forms/paperform"
 import MCQpaperForm from "./components/custom/Forms/MCQpaperform"
 import SubjectDash from "./sections/Faculty/papermaking/SubjectDash"
@@ -229,14 +231,15 @@ class AppRouter extends React.Component {
       // Set the directory path if you are deploying in sub-folder
       <Router history={history}>
         <Switch>
-          <AppRoute exact path="/" component={analyticsDashboard} />
+          {/* <AppRoute exact path="/" component={analyticsDashboard} />
           <AppRoute
             path="/ecommerce-dashboard"
             component={ecommerceDashboard}
-          />
+          /> */}
           <AppRoute
-            path="/Student"
+            path="/"
             component={ StudentSection}
+            exact
           />
            <AppRoute
             path="/Faculty"
@@ -260,6 +263,18 @@ class AppRouter extends React.Component {
             component={MCQpaperForm}
             exact
           />
+
+let testRoute = null 
+    
+    testRoute = (<Switch>
+      <Route path="/mcq" exact  component={MCQ}/>
+      <Route path="/subjective" exact component={Subjective}/>
+      
+    </Switch>)
+    
+    return (
+    <MCQ/>
+      )
           <AppRoute path="/calendar" component={calendar} />
           {/* <AppRoute path="/ecommerce/shop" component={shop} />
           <AppRoute path="/ecommerce/wishlist" component={wishlist} />

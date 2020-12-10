@@ -13,7 +13,7 @@ import {
   changeMenuColor,
   hideScrollToTop,
   changeMode
-} from "../redux/Actions/customizer/index"
+} from "../redux/actions/customizer/index"
 
 class HorizontalLayout extends PureComponent {
   state = {
